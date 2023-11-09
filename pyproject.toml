@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "libmicha"
+authors = [
+    {name = "Michaël PAULON", email = "paulon@crans.org"},
+]
+description = "Personal library with a lot of utility functions"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = []
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+]
+dynamic = ["version"]
+
+[tool.bumpversion]
+current_version = "0.1.0"
+message = "🔖 VERSION: {current_version} → {new_version}"
+
+[[tool.bumpversion.files]]
+filename = "libmicha/__version__.py"
+search = "VERSION = \"{current_version}\""
+replace = "VERSION = \"{new_version}\""
