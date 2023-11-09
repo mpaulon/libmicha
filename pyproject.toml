@@ -15,9 +15,12 @@ license = {text = "MIT"}
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
-dependencies = [
-]
-dynamic = ["version"]
+dynamic = ["version", "dependencies", "optional-dependencies"]
+
+[tool.setuptools.dynamic]
+version = {attr = "libmicha.VERSION"}
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
 
 [tool.bumpversion]
 current_version = "0.1.0"
