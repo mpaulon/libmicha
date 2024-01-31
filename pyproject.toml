@@ -30,3 +30,6 @@ message = "🔖 VERSION: {current_version} → {new_version}"
 filename = "libmicha/__version__.py"
 search = "VERSION = \"{current_version}\""
 replace = "VERSION = \"{new_version}\""
+
+[tool.black]
+line-length = 120
